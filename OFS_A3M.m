@@ -1,38 +1,37 @@
 function [ selectedFeatures,time ] = OFS_A3M( X, Y)
-% Adapated Neighgborhood rough set 
-% Max-dependency Max-relevance Max-significance
+%  Peng Zhou;Xuegang Hu;Peipei Li 
+% A New Online Feature Selection Method Using Neighborhood Rough Set
+% 2017 IEEE International Conference on Big Knowledge (ICBK) 2017
 %
-% Output:  selectedFeatures  选择的特征序号集合
-%                time   算法运行时间
-% Input:  X     样本属性数据矩阵
-%            Y     样本标签矩阵
-%            N     判别点的左右邻近点数
+% Output:  selectedFeatures  the index of selected features
+%          time   running time
+% Input:  X     data samples vector
+%         Y     label vector
 %   
 
-%计算运行时间
+
 start=tic;
 [~,p]=size(X);
 
-mode=zeros(1,p);                                             %标记选中的属性下标
-dep_Mean=0;                                                    %目前已选特征集合里面个特征的dep均值
-dep_Set=0;                                                        %目前已选特征集合的dep值
-depArray=zeros(1,p);                                        %单个依赖度数组
+mode=zeros(1,p);                                             
+dep_Mean=0;                                                    
+dep_Set=0;                                                 
+depArray=zeros(1,p);                                        
 
 
 for i=1:p
      col=X(:,i);
-     dep_single=dep_an(col,Y);                          %根据样本的正域个数计算单个属性的依赖性
+     dep_single=dep_an(col,Y);                          
      depArray(1,i)=dep_single;
      
-    if dep_single>dep_Mean                               % Max-relevance 单个特征依赖度>dep_mean 则成为备选特征
+    if dep_single>dep_Mean                               
             mode(1,i)=1;             
-            cols=X(:,mode==1);                               %计算联合贡献度    
+            cols=X(:,mode==1);                                  
             dep_New=dep_an(cols,Y);
-            if dep_New>dep_Set                             %Map-dependency
+            if dep_New>dep_Set                             
                    dep_Set=dep_New;
                    dep_Mean=dep_Set/sum(mode);
-            elseif dep_New==dep_Set                                                         %Max-significance
-
+            elseif dep_New==dep_Set                                                        
                    [index_del] = non_signf(X,Y,mode,i);
                    mode(1,index_del)=0;
 
@@ -51,7 +50,7 @@ time=toc(start);
 end
 
 function [index_del] = non_signf(X,Y,mode,i)
-%在备选集合中查找并移除significant==0的特征
+
 B=zeros(1,length(mode));
 R=mode;
 T=mode;
@@ -73,7 +72,7 @@ index_del=B==1;
 end
 
 function [s]= sig(X,Y,mode,f_i)
-%计算属性重要度
+
 [d_B]=dep_an(X(:,mode==1),Y);
 mode(1,f_i)=0;
 [d_F]=dep_an(X(:,mode==1),Y);
@@ -83,7 +82,6 @@ end
 
 
 function [ dep ] = dep_an(data,Y)
-%计算条件属性data对标签Y的依赖度
 
 [n,~]=size(data);
 card_U=length(Y);
@@ -99,10 +97,6 @@ dep=card_ND/card_U;
 end
 
 
-%不需要参数N计算card值
-%N个数为最近邻点数：使用最大距离-最小距离，然后分成N等份，如果由近及远的某一等份中无点，取前x等份中点数
-%               [max{d}-min{d}]/N+x*min{d}    
-%根据相同程度计算card值
 function [c]=card(sets,Y,label,N)
         [D,I]=sort(sets);        
         
