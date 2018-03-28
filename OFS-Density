@@ -1,0 +1,129 @@
+function [ selectedFeatures,time ] = OFS_Density( X, Y)
+
+[~,p]=size(X);
+
+mode=zeros(1,p);                                             
+dep_Mean=0;                                                 
+dep_Set=0;                          
+depArray=zeros(1,p);                   
+
+start=tic;
+for i=1:p
+     col=X(:,i);
+     dep_single=dep_an(col,Y);                    
+     depArray(1,i)=dep_single;
+     
+    if dep_single>=dep_Mean                                
+            mode(1,i)=1;             
+            cols=X(:,mode==1);
+            dep_New=dep_an(cols,Y); 
+            
+            if dep_New>dep_Set                            
+                dep_Set=dep_New;
+                dep_Mean=sum(depArray(1,mode==1))/sum(mode);
+                continue;
+            end 
+            
+            if (abs(dep_New-dep_Set)/dep_Set)<=0.05    
+                 [index_del] = non_signf(X,Y,mode,i);
+                 mode(1,index_del)=0;
+                 dep_Del=dep_an(X(:,mode==1),Y);
+                 
+                 if dep_Del>=dep_Set
+                     dep_Set=dep_Del;
+                     dep_Mean=sum(depArray(1,mode==1))/sum(mode);
+                 else
+                      mode(1,index_del)=1;
+                 end
+                  
+                continue;
+            end
+            
+                 mode(1,i)=0;   
+     end
+    
+end
+
+selectedFeatures=find(mode==1);
+
+time=toc(start);
+
+end
+
+function [index_del] = non_signf(X,Y,mode,i)
+
+B=zeros(1,length(mode));
+R=mode;
+T=mode;
+T(1,i)=0;
+
+indexs=find(T==1);
+Num=length(indexs);
+A=randperm(Num);
+
+for i=1:Num
+    rnd=A(i);
+    ind=indexs(rnd);
+    if sig(X,Y,R,ind)<=0
+        B(1,ind)=1;
+        R(1,ind)=0;
+    else
+        R(1,ind)=1;
+    end
+end
+index_del=B==1;
+end
+
+function [s]= sig(X,Y,mode,f_i)
+
+[d_B]=dep_an(X(:,mode==1),Y);
+mode(1,f_i)=0;
+[d_F]=dep_an(X(:,mode==1),Y);
+
+s=(d_B-d_F);
+end
+
+function[dep]=dep_an(data,Y)
+
+[n,~]=size(data);
+card_U=length(Y);
+card_ND=0;
+D = pdist(data,'seuclidean');
+DArray=squareform(D,'tomatrix');
+for i=1:n
+     d=DArray(:,i);
+     class=Y(i,1);
+     card_ND=card_ND+card_density(d,Y,class,n);
+end
+dep=card_ND/card_U;
+end
+
+
+function [c]=card_density(sets,Y,label,N)
+        [D,I]=sort(sets);        
+        
+        cTotal=0;
+        cNum=0;
+        last_density=0;
+        
+         if D(2,1)>=0
+             last_density=D(2,1);
+         end
+        
+         for j=2:N
+                 density=D(j,1)/(j-1);
+                 ind=I(j,1);
+                 if density==0||density<=last_density 
+                     last_density=density;
+                     cTotal=cTotal+1;
+                     if Y(ind,1)==label
+                         cNum=cNum+1;
+                     end
+                 else
+                      break;
+                 end
+                 
+         end
+         
+         c=cNum/cTotal;
+end
