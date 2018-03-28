@@ -1,4 +1,10 @@
 function [ selectedFeatures,time ] = OFS_Density( X, Y)
+%
+%
+% Output:  selectedFeatures  the index of selected features
+%          time   running time
+% Input:  X     data samples vector
+%         Y     label vector
 
 [~,p]=size(X);
 
@@ -51,6 +57,8 @@ time=toc(start);
 end
 
 function [index_del] = non_signf(X,Y,mode,i)
+% delete non significant features in selected subset
+%
 
 B=zeros(1,length(mode));
 R=mode;
@@ -75,7 +83,8 @@ index_del=B==1;
 end
 
 function [s]= sig(X,Y,mode,f_i)
-
+% calculate the significance of feature f_i
+%
 [d_B]=dep_an(X(:,mode==1),Y);
 mode(1,f_i)=0;
 [d_F]=dep_an(X(:,mode==1),Y);
@@ -84,7 +93,8 @@ s=(d_B-d_F);
 end
 
 function[dep]=dep_an(data,Y)
-
+% calculate the denpendency of data to Y
+%
 [n,~]=size(data);
 card_U=length(Y);
 card_ND=0;
@@ -100,6 +110,8 @@ end
 
 
 function [c]=card_density(sets,Y,label,N)
+% use density relation to calculate the card value
+%
         [D,I]=sort(sets);        
         
         cTotal=0;
