@@ -20,10 +20,12 @@ This fold contains 2 algorithms:
 2) OFS-A3M
 
 @inproceedings{OFS-A3M,
+
     author = {Peng Zhou and Xuegang Hu and Peipei Li},  
     title = {A New Online Feature Selection Method Using Neighborhood Rough Set},    
     booktitle = {2017 IEEE International Conference on Big Knowledge (ICBK)},    
     series = {},    
     year = {2017},   
-    pages = {1-6},
+    pages = {1-6}
+    
 } 
