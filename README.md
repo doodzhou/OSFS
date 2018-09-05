@@ -31,6 +31,7 @@ This fold contains 3 algorithms:
 } 
 
 3) OFS-Density
+
 @article{OFS-Density,
     
     author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},
