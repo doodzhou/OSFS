@@ -1,7 +1,7 @@
 # OSFS
 Online Streaming Feature Selection algorithms sourcecode:    
 
-This fold contains 2 algorithms:
+This fold contains 3 algorithms:
 
 1) K-OFSD
 
@@ -29,3 +29,13 @@ This fold contains 2 algorithms:
     pages = {1-6}
     
 } 
+
+3) OFS-Density
+@article{OFS-Density,
+    
+    author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},
+    title={OFS-Density: A Novel Online Streaming Feature Selection Method},
+    journal={Pattern Recognition},
+    DOI={10.1016/j.patcog.2018.08.009}
+
+}
