@@ -46,12 +46,12 @@ This fold contains 3 algorithms:
 
 @article{OFS-Density,  
 
-  title={OFS-Density: A novel online streaming feature selection method},
-  author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},
-  journal={Pattern Recognition},
-  volume={86},
-  number={},
-  pages={48-61},
-  year={2019},
+    title={OFS-Density: A novel online streaming feature selection method},
+    author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},
+    journal={Pattern Recognition},
+    volume={86},
+    number={},
+    pages={48-61},
+    year={2019},
 
 }
