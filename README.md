@@ -24,9 +24,9 @@ This fold contains 3 algorithms:
     author = {Peng Zhou and Xuegang Hu and Peipei Li},  
     title = {A New Online Feature Selection Method Using Neighborhood Rough Set},    
     booktitle = {2017 IEEE International Conference on Big Knowledge (ICBK)},    
-    series = {},    
-    year = {2017},   
-    pages = {1-6}
+    volume={1},
+    year = {2017},
+    pages = {135-142},
     
 } 
 
