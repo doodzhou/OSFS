@@ -31,10 +31,11 @@ This fold contains 3 algorithms:
 } 
 
 @article{OFS-A3M,
-	author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},
-	title={Online Streaming Feature Selection Using Adapted Neighborhood Rough Set},
-	journal={Information Sciences},
-	volume={481},
+
+    author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},
+    title={Online Streaming Feature Selection Using Adapted Neighborhood Rough Set},
+    journal={Information Sciences},
+    volume={481},
     number={},
     pages={258-279},
     year={2019}
@@ -44,6 +45,7 @@ This fold contains 3 algorithms:
 3) OFS-Density
 
 @article{OFS-Density,  
+
   title={OFS-Density: A novel online streaming feature selection method},
   author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},
   journal={Pattern Recognition},
