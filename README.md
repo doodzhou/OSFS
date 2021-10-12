@@ -73,21 +73,13 @@ Online Streaming Feature Selection algorithms sourcecodes:
 @article{OGSFS-FI,
 
     title = {Online group streaming feature selection considering feature interaction},
-
     journal = {Knowledge-Based Systems},
-
     volume = {226},
-
     pages = {107157},
-
     year = {2021},
-
     issn = {0950-7051},
-
     doi = {https://doi.org/10.1016/j.knosys.2021.107157},
-
     url = {https://www.sciencedirect.com/science/article/pii/S0950705121004202},
-
     author = {Peng Zhou and Ni Wang and Shu Zhao},
 
 }
@@ -97,19 +89,12 @@ Online Streaming Feature Selection algorithms sourcecodes:
   @ARTICLE{SFS-FI,
 
     author={Zhou, Peng and Li, Peipei and Zhao, Shu and Wu, Xindong},
-
     journal={IEEE Transactions on Neural Networks and Learning Systems}, 
-
     title={Feature Interaction for Streaming Feature Selection}, 
-
     year={2021},
-
     volume={32},
-
     number={10},
-
     pages={4691-4702},
-
     doi={10.1109/TNNLS.2020.3025922}
 
     }
