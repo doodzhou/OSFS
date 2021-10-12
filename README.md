@@ -4,19 +4,12 @@ A survey of Online Streaming Feature Selection
   @article{hu2018survey,
   
     title={A survey on online feature selection with streaming features},
-    
-    author={Hu, Xuegang and Zhou, Peng and Li, Peipei and Wang, Jing and Wu, Xindong},
-    
-    journal={Frontiers of Computer Science},
-    
-    volume={12},
-    
-    number={3},
-    
-    pages={479--493},
-    
-    year={2018},
-    
+    author={Hu, Xuegang and Zhou, Peng and Li, Peipei and Wang, Jing and Wu, Xindong},    
+    journal={Frontiers of Computer Science},   
+    volume={12},    
+    number={3},    
+    pages={479--493},    
+    year={2018},    
     publisher={Springer}  
 }
 
