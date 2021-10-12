@@ -1,0 +1,91 @@
+function [ selectedFeatures,time ] = OSGFS_FI_intra(G,Y)
+%OFS_INTERACTION 
+% online streaming feature selection considering feature interaction
+%
+% Output:  selectedFeatures  选择的特征序号集合
+%                time   算法运行时间
+% Input:  X     样本属性数据矩阵
+%            Y     样本标签矩阵
+%            G     Group大小
+
+start=tic;
+
+[~,p]=size(G);
+MI_Array=zeros(1,p);
+S=ones(1,p);
+R=zeros(1,p);
+
+for i=1:p
+    MI_Array(1,i)=SU(G(:,i),Y);
+end
+% disp(MI_Array);
+
+I_R=0;
+while ~isempty(find(S==1, 1))            
+         [mi_val,I]=max(MI_Array);
+         if mi_val<0
+             break;
+         end
+         
+            current_index=I;
+            S(1,current_index)=0;
+            R(1,current_index)=1;
+            MI_Array(1,current_index)=-1;
+%             disp(['--------current---',int2str(current_index)]);
+            I_current=round(SU(G(:,R==1),Y)*10000)/10000;
+            
+            unSelected=find(S==1);
+            sum_unSelected=length(unSelected);
+            interactArray=zeros(1,p);
+            for j=1:sum_unSelected
+                     unSelected_index=unSelected(1,j);
+                     mi_inter=mi3(G(:,current_index),G(:,unSelected_index),Y);   
+                    if mi_inter>=0
+                         S(1,unSelected_index)=-1;
+                         MI_Array(1,unSelected_index)=-1;
+%                          disp(['-----negative index---',int2str(unSelected_index)]);
+                    else
+                          R(1,unSelected_index)=1;                      
+                          MS_current=round(SU(G(:,R==1),Y)*10000)/10000;  
+%                           disp(['-----interactive index---',int2str(unSelected_index)]);
+%                           disp([mi_inter,MS_current,I_R]);
+                          if MS_current>I_R 
+                              interactArray(1,unSelected_index)=MS_current;
+                              interactArray(1,unSelected_index)=mi_inter;
+                          end    
+                           R(1,unSelected_index)=0;                         
+                           S(1,unSelected_index)=-1; 
+                           MI_Array(1,unSelected_index)=-1;
+                     end                 
+            end
+             
+            %没有选择交互特征
+            if ~isempty(interactArray<0)
+                while ~isempty(find(interactArray<0, 1))
+                    [~,I]=min(interactArray);
+                    R(1,I)=1;
+                    mi_int=round(SU(G(:,R==1),Y)*10000)/10000;
+                    if mi_int>I_R
+                        I_R=mi_int;
+                    else
+                         R(1,I)=0;
+                    end 
+                    interactArray(1,I)=0;
+                end
+            else
+%                 disp(['--------single---',int2str(current_index)])
+%                 disp([I_current,I_R]);
+                if I_current<=I_R
+                    S(1,current_index)=-1;
+                    R(1,current_index)=0;
+                    MI_Array(1,current_index)=-1;
+                else                               
+                    I_R=I_current;
+                end
+            end
+%           disp(R);        
+end
+
+selectedFeatures=find(R==1);
+time=toc(start);
+end
