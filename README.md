@@ -3,12 +3,19 @@ A survey of Online Streaming Feature Selection
 
   @article{hu2018survey,
     title={A survey on online feature selection with streaming features},
+    
     author={Hu, Xuegang and Zhou, Peng and Li, Peipei and Wang, Jing and Wu, Xindong},
+    
     journal={Frontiers of Computer Science},
+    
     volume={12},
+    
     number={3},
+    
     pages={479--493},
+    
     year={2018},
+    
     publisher={Springer}  
 }
 
@@ -72,14 +79,22 @@ This fold contains 4 algorithms:
 
 @article{ZHOU2021107157,
 
-title = {Online group streaming feature selection considering feature interaction},
-journal = {Knowledge-Based Systems},
-volume = {226},
-pages = {107157},
-year = {2021},
-issn = {0950-7051},
-doi = {https://doi.org/10.1016/j.knosys.2021.107157},
-url = {https://www.sciencedirect.com/science/article/pii/S0950705121004202},
-author = {Peng Zhou and Ni Wang and Shu Zhao},
+  title = {Online group streaming feature selection considering feature interaction},
+  
+  journal = {Knowledge-Based Systems},
+  
+  volume = {226},
+  
+  pages = {107157},
+  
+  year = {2021},
+  
+  issn = {0950-7051},
+  
+  doi = {https://doi.org/10.1016/j.knosys.2021.107157},
+  
+  url = {https://www.sciencedirect.com/science/article/pii/S0950705121004202},
+  
+  author = {Peng Zhou and Ni Wang and Shu Zhao},
 
 }
