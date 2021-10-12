@@ -1,6 +1,8 @@
 # OSFS
 A survey of Online Streaming Feature Selection 
+
 @article{hu2018survey,
+
   title={A survey on online feature selection with streaming features},
   author={Hu, Xuegang and Zhou, Peng and Li, Peipei and Wang, Jing and Wu, Xindong},
   journal={Frontiers of Computer Science},
@@ -9,6 +11,7 @@ A survey of Online Streaming Feature Selection
   pages={479--493},
   year={2018},
   publisher={Springer}
+  
 }
 
 Online Streaming Feature Selection algorithms sourcecode:    
@@ -68,6 +71,7 @@ This fold contains 4 algorithms:
 }
 
 4) OGSFS-FI
+
 @article{ZHOU2021107157,
 
 title = {Online group streaming feature selection considering feature interaction},
