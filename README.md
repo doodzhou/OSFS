@@ -1,17 +1,15 @@
 # OSFS
 A survey of Online Streaming Feature Selection 
 
-@article{hu2018survey,
-
-  title={A survey on online feature selection with streaming features},
-  author={Hu, Xuegang and Zhou, Peng and Li, Peipei and Wang, Jing and Wu, Xindong},
-  journal={Frontiers of Computer Science},
-  volume={12},
-  number={3},
-  pages={479--493},
-  year={2018},
-  publisher={Springer}
-  
+  @article{hu2018survey,
+    title={A survey on online feature selection with streaming features},
+    author={Hu, Xuegang and Zhou, Peng and Li, Peipei and Wang, Jing and Wu, Xindong},
+    journal={Frontiers of Computer Science},
+    volume={12},
+    number={3},
+    pages={479--493},
+    year={2018},
+    publisher={Springer}  
 }
 
 Online Streaming Feature Selection algorithms sourcecode:    
@@ -19,7 +17,7 @@ This fold contains 4 algorithms:
 
 1) K-OFSD
 
-@article{K-OFSD,
+  @article{K-OFSD,
 
     author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},   
     title={Online feature selection for high-dimensional class-imbalanced data},   
@@ -29,7 +27,7 @@ This fold contains 4 algorithms:
     pages={187-199},    
     year={2017}
     
-}
+  }
 
 2) OFS-A3M
 
