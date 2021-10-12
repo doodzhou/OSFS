@@ -1,0 +1,42 @@
+function [ selectedFeatures,time ] = OSGFS_FI_inter(X,Y,G,alpha)
+%OFS_INTERACTION 
+% online streaming feature selection considering feature interaction
+%
+% Output:  selectedFeatures  选择的特征序号集合
+%                time   算法运行时间
+% Input:  X     样本属性数据矩阵
+%         Y     样本标签矩阵
+%         G     Group大小
+
+start=tic;
+[~,P]=size(X);
+mode=zeros(1,P);
+for i=1:G:P
+    i_end=G+i-1;
+    if i_end>P
+        i_end=P;
+    end
+    indexArray=[find(mode==1),i:i_end];
+    X_G=X(:,indexArray);
+    mode_G=OSGFS_FI_intra(X_G,Y);
+    G_N=length(mode_G);
+    for j=1:G_N
+          ind=mode_G(1,j);
+          index=indexArray(ind);
+          mode(1,index)=1;
+    end
+end
+
+intraSelectedFeatures=find(mode==1);
+
+%运行Elastic  Net
+X_Inter=X(:,intraSelectedFeatures);
+%TODO CV的值可以进一步微调
+[B,FitInfo]=lasso(X_Inter,Y,'Alpha',alpha,'CV',5);
+
+minInd=FitInfo.IndexMinMSE;
+SF=B(:,minInd);
+selectedFeatures=intraSelectedFeatures(SF~=0);
+time=toc(start);   
+
+end
