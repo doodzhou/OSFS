@@ -2,6 +2,7 @@
 A survey of Online Streaming Feature Selection 
 
   @article{hu2018survey,
+  
     title={A survey on online feature selection with streaming features},
     
     author={Hu, Xuegang and Zhou, Peng and Li, Peipei and Wang, Jing and Wu, Xindong},
@@ -19,8 +20,7 @@ A survey of Online Streaming Feature Selection
     publisher={Springer}  
 }
 
-Online Streaming Feature Selection algorithms sourcecode:    
-This fold contains 4 algorithms:
+Online Streaming Feature Selection algorithms sourcecodes:    
 
 1) K-OFSD
 
@@ -98,3 +98,25 @@ This fold contains 4 algorithms:
     author = {Peng Zhou and Ni Wang and Shu Zhao},
 
 }
+
+5)SFS-FI
+
+@ARTICLE{9214873,
+
+  author={Zhou, Peng and Li, Peipei and Zhao, Shu and Wu, Xindong},
+  
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  
+  title={Feature Interaction for Streaming Feature Selection}, 
+  
+  year={2021},
+  
+  volume={32},
+  
+  number={10},
+  
+  pages={4691-4702},
+  
+  doi={10.1109/TNNLS.2020.3025922}
+  
+  }
