@@ -98,3 +98,18 @@ Online Streaming Feature Selection algorithms sourcecodes:
     doi={10.1109/TNNLS.2020.3025922}
 
     }
+ 
+ 6) OSFS_ET
+
+ @article{OSFS_ET,
+ 
+    title = {Online early terminated streaming feature selection based on Rough Set theory},
+    journal = {Applied Soft Computing},
+    volume = {113},
+    pages = {107993},
+    year = {2021},
+    issn = {1568-4946},
+    doi = {https://doi.org/10.1016/j.asoc.2021.107993},
+    url = {https://www.sciencedirect.com/science/article/pii/S1568494621009157},
+    author = {Peng Zhou and Peipei Li and Shu Zhao and Yanping Zhang}
+}
