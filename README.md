@@ -114,14 +114,16 @@ Online Streaming Feature Selection algorithms sourcecodes:
     author = {Peng Zhou and Peipei Li and Shu Zhao and Yanping Zhang}
 }
 
+7)OSSFS-DD
+
 @article{zhou2022online,
 
-title={Online Scalable Streaming Feature Selection via Dynamic Decision},
-author={Zhou, Peng and Zhao, Shu and Yan, Yuanting and Wu, Xindong},
-journal={ACM Transactions on Knowledge Discovery from Data (TKDD)},
-volume={16},
-number={5},
-pages={1--20},
-year={2022},
-publisher={ACM New York, NY}
+    title={Online Scalable Streaming Feature Selection via Dynamic Decision},
+    author={Zhou, Peng and Zhao, Shu and Yan, Yuanting and Wu, Xindong},
+    journal={ACM Transactions on Knowledge Discovery from Data (TKDD)},
+    volume={16},
+    number={5},
+    pages={1--20},
+    year={2022},
+    publisher={ACM New York, NY}
 }
