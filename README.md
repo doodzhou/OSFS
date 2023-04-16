@@ -1,5 +1,6 @@
-# OSFS
-A survey of Online Streaming Feature Selection 
+# Online Streaming Feature Selection
+
+## A survey of Online Streaming Feature Selection 
 
   @article{hu2018survey,
   
@@ -15,7 +16,7 @@ A survey of Online Streaming Feature Selection
 
 Online Streaming Feature Selection algorithms sourcecodes:    
 
-1) K-OFSD
+## 1) K-OFSD
 
   @article{K-OFSD,
 
@@ -29,7 +30,7 @@ Online Streaming Feature Selection algorithms sourcecodes:
     
   }
 
-2) OFS-A3M
+## 2) OFS-A3M
 
 @inproceedings{OFS-A3M,
 
@@ -42,7 +43,7 @@ Online Streaming Feature Selection algorithms sourcecodes:
     
 } 
 
-@article{OFS-A3M,
+## @article{OFS-A3M,
 
     author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},
     title={Online Streaming Feature Selection Using Adapted Neighborhood Rough Set},
@@ -54,7 +55,7 @@ Online Streaming Feature Selection algorithms sourcecodes:
     
 }
 
-3) OFS-Density
+## 3) OFS-Density
 
 @article{OFS-Density,  
 
@@ -68,7 +69,7 @@ Online Streaming Feature Selection algorithms sourcecodes:
 
 }
 
-4) OGSFS-FI
+## 4) OGSFS-FI
 
 @article{OGSFS-FI,
 
@@ -84,7 +85,7 @@ Online Streaming Feature Selection algorithms sourcecodes:
 
 }
 
-5) SFS-FI
+## 5) SFS-FI
 
   @ARTICLE{SFS-FI,
 
@@ -99,7 +100,7 @@ Online Streaming Feature Selection algorithms sourcecodes:
 
     }
  
- 6) OSFS_ET
+## 6) OSFS_ET
 
  @article{OSFS_ET,
  
@@ -114,7 +115,7 @@ Online Streaming Feature Selection algorithms sourcecodes:
     author = {Peng Zhou and Peipei Li and Shu Zhao and Yanping Zhang}
 }
 
-7) OSSFS-DD
+## 7) OSSFS-DD
 
 @article{zhou2022online,
 
@@ -128,7 +129,7 @@ Online Streaming Feature Selection algorithms sourcecodes:
     publisher={ACM New York, NY}
 }
 
-8) OSFS-RS
+## 8) OSFS-RS
 
 @article{ZHOU2022117520,
 
