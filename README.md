@@ -43,7 +43,9 @@ Online Streaming Feature Selection algorithms sourcecodes:
     
 } 
 
-## @article{OFS-A3M,
+## 2)OFS-A3M 
+
+@article{OFS-A3M,
 
     author={Peng Zhou and Xuegang Hu and Peipei Li and Xindong Wu},
     title={Online Streaming Feature Selection Using Adapted Neighborhood Rough Set},
