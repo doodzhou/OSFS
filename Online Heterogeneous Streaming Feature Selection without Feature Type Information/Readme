@@ -1,0 +1,14 @@
+Online Heterogeneous Streaming Feature Selection without Feature Type Information
+
+Abstract—Feature selection aims to select an optimal minimal feature subset from the original datasets and has become an
+indispensable preprocessing component before data mining and machine learning, especially in the era of big data. However,
+features may be generated dynamically and arrive individually over time in practice, which we call streaming features. Most
+existing streaming feature selection methods assume that all dynamically generated features are the same type or assume we can
+know the feature type for each new arriving feature in advance, but this is unreasonable and unrealistic. Therefore, this paper
+first studies a practical issue of Online Heterogeneous Streaming Feature Selection without the feature type information before
+learning, named OHSFS. Specifically, we first model the streaming feature selection issue as a minimax problem. Then, in terms
+of MIC (Maximal Information Coefficient), we derive a new metric MICGain to determine whether a new streaming feature
+should be selected. To speed up the efficiency of OHSFS, we present the metric MICCor that can directly discard low correlation
+features. Finally, extensive experimental results indicate the effectiveness of OHSFS. Moreover, OHSFS is nonparametric and
+does not need to know the feature type before learning, which aligns with practical application needs.
+Index Terms—Online Feature Selection, Streaming Feature, Heterogeneous Feature, Maximal Information Coefficient
