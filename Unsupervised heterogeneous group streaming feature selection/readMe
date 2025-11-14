@@ -1,0 +1,13 @@
+@article{ZHOU2026112280,
+title = {Unsupervised heterogeneous group streaming feature selection},
+journal = {Pattern Recognition},
+volume = {171},
+pages = {112280},
+year = {2026},
+issn = {0031-3203},
+doi = {https://doi.org/10.1016/j.patcog.2025.112280},
+url = {https://www.sciencedirect.com/science/article/pii/S0031320325009410},
+author = {Peng Zhou and Qianzhen Chen and Lei Sang and Shu Zhao and Xindong Wu},
+keywords = {Feature selection, Unsupervised feature selection, Streaming feature, Heterogeneous feature group, Feature clustering},
+abstract = {Feature selection aims to select the optimal feature subsets from the dataset and has been widely applied in many fields and systems. However, data are not always static, and most of them are unlabeled. Besides, features may be heterogeneous and generated dynamically in practical applications. Therefore, online streaming feature selection was proposed that assumes the features are generated one by one or group by group on the fly while the number of instances remains fixed. This paper focuses on a new practical issue of online unsupervised streaming feature selection where the features are heterogeneous and dynamically generated in groups. Difficulties come from three aspects: the lack of label information, the uncertainty about the feature space, and the dynamic generation of heterogeneous streaming features. To solve this issue, we propose a new online Unsupervised Heterogeneous Group Streaming Feature Selection method named UHGSFS. To handle the problem of heterogeneous streaming features without the feature type information, UHGSFS applies MIC (Maximal Information Coefficient) to evaluate feature relationships without assuming data distribution in advance. To address the challenge of unlabeled information, UHGSFS clusters streaming features by the density based on the Gaussian kernel function and minimizes redundancy by selecting representative features. Extensive experiments were conducted on 13 benchmark datasets, with comprehensive comparisons against state-of-the-art supervised and unsupervised streaming feature selection methods. The experimental results demonstrate that our proposed method achieves comparable or even superior performance relative to supervised streaming feature selection methods.}
+}
