@@ -1,0 +1,17 @@
+Online Distributed Heterogeneous Streaming Feature Selection
+
+@article{10.1145/3767722,
+author = {Zhou, Peng and Deng, Huiqi and Zhang, Yunyun and Ling, Zhaolong and Wu, Xindong},
+title = {Online Distributed Heterogeneous Streaming Feature Selection},
+year = {2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {2157-6904},
+url = {https://doi.org/10.1145/3767722},
+doi = {10.1145/3767722},
+abstract = {Data is exploding in many fields and may exist in the streaming mode. When the generation speed of massive streaming data far exceeds the processing speed of a single node, and the generated data needs to be processed in real-time, traditional centralized learning models are challenging in meeting the efficiency requirements. Therefore, online distributed learning models emerge. As time progresses, features may continuously emerge from various sources in a distributed and heterogeneous fashion. Therefore, we study the problem of online distributed heterogeneous streaming feature selection and propose a novel framework to address it, named DHSFS. The framework comprises two main components: sub-node streaming feature selection and global information synchronization. The sub-node component uses a dynamic strategy to select strong features, discard irrelevant ones, and cache weakly relevant features. In the global information synchronization stage, each sub-node synchronizes statistics information with the master node to adjust the global thresholds dynamically. Finally, the features selected by each sub-node are summarized and output. Experiments on 16 datasets show that the DHSFS framework has both high prediction accuracy and high efficiency of online stream feature selection.},
+note = {Just Accepted},
+journal = {ACM Trans. Intell. Syst. Technol.},
+month = sep,
+keywords = {Feature Selection, Online Feature Selection, Streaming Feature, Heterogeneous Feature, Distributed Learning}
+}
